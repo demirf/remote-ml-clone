@@ -13,14 +13,7 @@ export default {
       <navbar />
       <div class="columns header-content">
         <div class="column is-two-thirds">
-          <h1>Remote Machine Learning Jobs</h1>
-          <p>
-            The best place to find Remote work in Machine Learning, Data
-            Science, Deep Learning and Artificial Intelligence. Get new jobs to
-            your inbox daily.
-          </p>
-          <input type="text" class="input full-width" placeholder="Email" />
-          <button class="button header-bg is-rounded">Abone ol</button>
+          <slot name="content" />
         </div>
       </div>
     </div>

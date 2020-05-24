@@ -9,6 +9,16 @@ const routes = [
     path: '/',
     name: 'Home',
     component: Home
+  },
+  {
+    path: '/post-detail',
+    name: 'PostDetail',
+    component: () => import('../views/PostDetail.vue')
+  },
+  {
+    path: '/send-post',
+    name: 'SendPost',
+    component: () => import('../views/SendPost.vue')
   }
 ];
 
