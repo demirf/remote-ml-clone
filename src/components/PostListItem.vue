@@ -1,7 +1,17 @@
+<script>
+export default {
+  methods: {
+    postDetail() {
+      this.$router.push('post-detail');
+    }
+  }
+};
+</script>
+
 <template>
   <div class="columns card-wrapper">
     <div class="column is-half">
-      <div class="card">
+      <div class="card" @click="postDetail">
         <div class="card-content">
           <img
             src="https://kodilan.ams3.digitaloceanspaces.com/companies/epigra-bilgi-tek-ve-ilt-hiz-ltd-sti.png"

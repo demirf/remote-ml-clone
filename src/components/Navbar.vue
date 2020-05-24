@@ -2,9 +2,9 @@
   <nav class="navbar bg-primary" role="navigation" aria-label="main navigation">
     <div class="container">
       <div class="navbar-brand">
-        <a class="navbar-item" href="https://bulma.io">
+        <router-link to="/" class="navbar-item">
           <i class="fab fa-affiliatetheme fa-2x"></i>
-        </a>
+        </router-link>
 
         <a
           role="button"
@@ -21,17 +21,17 @@
 
       <div id="navbarBasicExample" class="navbar-menu">
         <div class="navbar-start">
-          <a class="navbar-item">
+          <router-link to="/" class="navbar-item">
             Home
-          </a>
+          </router-link>
         </div>
 
         <div class="navbar-end">
           <div class="navbar-item">
             <div class="buttons">
-              <a class="button is-rounded header-bg">
+              <router-link to="/send-post" class="button is-rounded header-bg">
                 İlan paylaş
-              </a>
+              </router-link>
             </div>
           </div>
         </div>
