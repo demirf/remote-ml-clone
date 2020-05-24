@@ -1,0 +1,31 @@
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  max-width: 1120px !important;
+  margin: 0 auto;
+}
+
+.is-primary {
+  background: rgba(54, 109, 255, 1.0) !important;
+}
+
+.bg-primary {
+  background: rgba(54, 109, 255, 1.0) !important;
+  opacity: .8;
+}
+
+.header-bg {
+  background: transparent;
+  color: #fff;
+  border-color: #fff !important;
+
+  &:hover {
+    background: white;
+    color: #212529;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05),
+      0 4px 10px rgba(255, 255, 255, 0.25);
+    transition: 0.3s;
+  }
+}
