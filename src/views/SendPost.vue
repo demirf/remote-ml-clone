@@ -1,10 +1,12 @@
 <script>
 import Header from '../components/Header';
+import { mapActions } from 'vuex';
 
 export default {
   data() {
     return {
-      isContinue: true
+      isContinue: true,
+      formData: {}
     };
   },
   components: {
@@ -13,6 +15,10 @@ export default {
   methods: {
     backButton() {
       this.isContinue = true;
+    },
+    ...mapActions(['createPost']),
+    sendPost() {
+      this.createPost(this.formData);
     }
   }
 };
@@ -42,18 +48,21 @@ export default {
               Step 1: Company Information
             </h1>
             <input
+              v-model="formData.companyName"
               type="text"
               class="input full-width"
               placeholder="Company Name*"
               required
             />
             <input
+              v-model="formData.companyWebsite"
               type="text"
               class="input full-width"
               placeholder="Company Website*"
               required
             />
             <input
+              v-model="formData.companyEmail"
               type="text"
               class="input full-width"
               placeholder="E-Mail*"
@@ -70,12 +79,13 @@ export default {
               Step 2: Job Post
             </h1>
             <input
+              v-model="formData.jobTitle"
               type="text"
               class="input full-width"
               placeholder="Job Title*"
             />
             <div class="select">
-              <select>
+              <select v-model="formData.jobCategory">
                 <option>Full-Time</option>
                 <option>Part-Time</option>
                 <option>Remote</option>
@@ -83,13 +93,14 @@ export default {
               </select>
             </div>
             <div class="select">
-              <select>
+              <select v-model="formData.jobLevel">
                 <option>Junior</option>
                 <option>Mid</option>
                 <option>Senior</option>
               </select>
             </div>
             <textarea
+              v-model="formData.jobDescription"
               type="text"
               class="input full-width"
               placeholder="Job Description*"
@@ -98,7 +109,7 @@ export default {
               <button class="button is-primary" @click="backButton">
                 Prev
               </button>
-              <button class="button is-primary">Share</button>
+              <button class="button is-primary" @click="sendPost">Share</button>
             </div>
           </template>
         </div>

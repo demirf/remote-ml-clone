@@ -1,6 +1,11 @@
 POST http://localhost:3000/send-post HTTP/1.1
 content-type: application/json
 
-{"CompanyName": "Superpeer", "CompanyWebsite": "superpeer.com", "CompanyEmail": "superpeer@gmail.com", "JobTitle": "Frontend Developer", "JobCategory": "Remote", "JobLevel": "Jr.", "JobDescription": "Test"}
+{"CompanyName": "Facebook", "CompanyWebsite": "facebook.com", "CompanyEmail": "facebook@gmail.com", "JobTitle": "Designer", "JobCategory": "Remote", "JobLevel": "Art Director", "JobDescription": "Test"}
 
 ###
+
+GET http://localhost:3000/get-post HTTP/1.1
+content-type: application/json
+
+{}

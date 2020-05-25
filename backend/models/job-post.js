@@ -1,13 +1,13 @@
 const mongoose = require('mongoose');
 
 const JobPostSchema = new mongoose.Schema({
-  CompanyName: String,
-  CompanyWebsite: String,
-  CompanyEmail: String,
-  JobTitle: String,
-  JobCategory: String,
-  JobLevel: String,
-  JobDescription: String
+  companyName: String,
+  companyWebsite: String,
+  companyEmail: String,
+  jobTitle: String,
+  jobCategory: String,
+  jobLevel: String,
+  jobDescription: String
 });
 
 module.exports = mongoose.model('JobPost', JobPostSchema);
