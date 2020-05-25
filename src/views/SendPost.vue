@@ -62,7 +62,7 @@ export default {
             <label>Company Logo*</label>
             <input type="file" class="input full-width is-primary" required />
             <button class="button is-primary" @click="isContinue = false">
-              Devam et
+              Continue
             </button>
           </template>
           <template v-else>
@@ -96,9 +96,9 @@ export default {
             ></textarea>
             <div class="button-wrapper">
               <button class="button is-primary" @click="backButton">
-                Geri
+                Prev
               </button>
-              <button class="button is-primary">Paylaş</button>
+              <button class="button is-primary">Share</button>
             </div>
           </template>
         </div>
