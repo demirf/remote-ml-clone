@@ -20,7 +20,6 @@ app.post('/send-post', (req, res) => {
 app.get('/get-post', async (req, res) => {
   const posts = await JobPost.getPost();
 
-  console.log(req.body);
   res.send(posts);
 });
 

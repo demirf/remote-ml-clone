@@ -1,15 +1,26 @@
 <script>
 import PostListItem from './PostListItem';
+import { mapActions, mapState } from 'vuex';
+
 export default {
   components: {
     PostListItem
+  },
+  computed: {
+    ...mapState(['posts'])
+  },
+  methods: {
+    ...mapActions(['fetchAllPost'])
+  },
+  mounted() {
+    this.fetchAllPost();
   }
 };
 </script>
 
 <template>
   <div class="post-list-container">
-    <post-list-item v-for="i in 3" :key="i" />
+    <post-list-item v-for="post in posts" :key="post.id" :post="post" />
   </div>
 </template>
 

@@ -10,10 +10,18 @@ const http = axios.create({
 });
 
 export default {
-  // fetchAllPost({ commit }, formData) {
-  //   commit('fetchAllPost', formData);
-  // },
   createPost(_, data) {
     return http.post('/send-post', data);
+  },
+  fetchAllPost({ commit }) {
+    return http
+      .get('/get-post')
+      .then(res => {
+        console.log(res);
+        commit('fetchAllPost', res.data);
+      })
+      .catch(e => {
+        console.log(e);
+      });
   }
 };

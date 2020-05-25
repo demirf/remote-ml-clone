@@ -1,5 +1,11 @@
 <script>
 export default {
+  props: {
+    post: {
+      type: Object,
+      required: true
+    }
+  },
   methods: {
     postDetail() {
       this.$router.push('post-detail');
@@ -17,8 +23,8 @@ export default {
             src="https://kodilan.ams3.digitaloceanspaces.com/companies/epigra-bilgi-tek-ve-ilt-hiz-ltd-sti.png"
           />
           <div class="description">
-            <h3 class="job-title">Machine Learning Engineer</h3>
-            <p class="company-name">Monte Carlo Data</p>
+            <h3 class="job-title">{{ post.jobTitle }}</h3>
+            <p class="company-name">{{ post.companyName }}</p>
             <div class="tags">
               <p class="tag">Machine Learning</p>
               <p class="tag">Python</p>

@@ -1,8 +1,13 @@
 <script>
 import Navbar from '../components/Navbar';
+import { mapState } from 'vuex';
+
 export default {
   components: {
     Navbar
+  },
+  computed: {
+    ...mapState(['posts'])
   }
 };
 </script>
