@@ -43,8 +43,10 @@ export default {
       <div class="card">
         <div class="card-content">
           <div class="company-logo">
+            <img v-if="post.companyLogo" :src="post.companyLogo" />
             <img
-              src="https://kodilan.ams3.digitaloceanspaces.com/companies/epigra-bilgi-tek-ve-ilt-hiz-ltd-sti.png"
+              v-else
+              src="https://kodilan.com/img/empty-company-logo.8437254b.png"
             />
           </div>
           <p class="title has-text-weight-light">
@@ -56,12 +58,15 @@ export default {
             <!-- <span class="company-location-date">Anywhere · May 20, 2020</span> -->
           </div>
           <div>
-            <button class="button is-black send-email-button">
+            <a
+              href="mailto:`${post.companyEmail}`"
+              class="button is-black send-email-button"
+            >
               <span class="icon">
                 <i class="fa fa-envelope"></i>
               </span>
               <span>Apply</span>
-            </button>
+            </a>
           </div>
           <div class="job-detail-list has-text-left">
             {{ post.jobTitle }}
@@ -87,6 +92,12 @@ export default {
     .company-location-date {
       color: rgb(90, 97, 105);
     }
+  }
+
+  img {
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
   }
 
   .send-email-button {

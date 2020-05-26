@@ -25,7 +25,6 @@ app.get('/get-post', async (req, res) => {
 
 app.get('/post-detail/:id', async (req, res) => {
   const postDetail = await JobPost.getPostDetail(req.params.id);
-  console.log(req.params);
 
   res.send(postDetail);
 });

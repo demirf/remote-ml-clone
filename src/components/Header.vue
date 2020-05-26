@@ -23,6 +23,7 @@ export default {
 <style lang="scss">
 .header {
   height: 70vh;
+  padding: 0 1.5rem;
 
   &-content {
     display: flex;

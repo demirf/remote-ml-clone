@@ -19,8 +19,10 @@ export default {
     <div class="column is-half">
       <div class="card" @click="postDetail">
         <div class="card-content">
+          <img v-if="post.companyLogo" :src="post.companyLogo" />
           <img
-            src="https://kodilan.ams3.digitaloceanspaces.com/companies/epigra-bilgi-tek-ve-ilt-hiz-ltd-sti.png"
+            v-else
+            src="https://kodilan.com/img/empty-company-logo.8437254b.png"
           />
           <div class="description">
             <h3 class="job-title">{{ post.jobTitle }}</h3>
@@ -49,6 +51,7 @@ export default {
 
       &-content {
         display: flex;
+        align-items: center;
 
         .description {
           padding-left: 40px;
@@ -63,6 +66,12 @@ export default {
             margin-top: 6px;
             margin-bottom: 18px;
           }
+        }
+
+        img {
+          width: 120px;
+          height: 120px;
+          border-radius: 100%;
         }
       }
     }

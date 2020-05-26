@@ -19,6 +19,19 @@ export default {
     ...mapActions(['createPost']),
     sendPost() {
       this.createPost(this.formData);
+    },
+    Images_onFileChanged(event) {
+      const file = event.target.files[0];
+
+      if (file) {
+        const reader = new FileReader();
+
+        reader.addEventListener('load', img => {
+          this.formData.companyLogo = img.srcElement.result;
+        });
+
+        reader.readAsDataURL(file);
+      }
     }
   }
 };
@@ -69,7 +82,13 @@ export default {
               required
             />
             <label>Company Logo*</label>
-            <input type="file" class="input full-width is-primary" required />
+            <input
+              type="file"
+              accept="image/*"
+              @change="Images_onFileChanged"
+              class="input full-width is-primary"
+              required
+            />
             <button class="button is-primary" @click="isContinue = false">
               Continue
             </button>

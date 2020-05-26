@@ -4,6 +4,7 @@ const JobPostSchema = new mongoose.Schema({
   companyName: String,
   companyWebsite: String,
   companyEmail: String,
+  companyLogo: '',
   jobTitle: String,
   jobCategory: String,
   jobLevel: String,
