@@ -9,3 +9,10 @@ GET http://localhost:3000/get-post HTTP/1.1
 content-type: application/json
 
 {}
+
+###
+
+GET http://localhost:3000/post-detail/5ecd48506d2a90a7251c3f57 HTTP/1.1
+content-type: application/json
+
+{}

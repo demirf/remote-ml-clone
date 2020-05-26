@@ -8,7 +8,7 @@ export default {
   },
   methods: {
     postDetail() {
-      this.$router.push('post-detail');
+      this.$router.push(`post-detail/${this.post._id}`);
     }
   }
 };

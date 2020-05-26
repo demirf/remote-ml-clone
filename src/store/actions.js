@@ -23,5 +23,8 @@ export default {
       .catch(e => {
         console.log(e);
       });
+  },
+  fetchPostDetail(_, id) {
+    return http.get(`/post-detail/${id}`);
   }
 };

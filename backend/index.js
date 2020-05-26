@@ -23,6 +23,13 @@ app.get('/get-post', async (req, res) => {
   res.send(posts);
 });
 
+app.get('/post-detail/:id', async (req, res) => {
+  const postDetail = await JobPost.getPostDetail(req.params.id);
+  console.log(req.params);
+
+  res.send(postDetail);
+});
+
 app.listen(3000, () => {
   console.log('Port Listening');
 });

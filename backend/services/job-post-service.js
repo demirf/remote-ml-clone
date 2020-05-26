@@ -8,7 +8,12 @@ const getPost = async () => {
   return await JobPost.find();
 };
 
+const getPostDetail = async id => {
+  return await JobPost.findById(id);
+};
+
 module.exports = {
   createPost,
-  getPost
+  getPost,
+  getPostDetail
 };
