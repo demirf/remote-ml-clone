@@ -59,7 +59,8 @@ export default {
           </div>
           <div>
             <a
-              href="mailto:`${post.companyEmail}`"
+              :href="`mailto:${post.companyEmail}`"
+              target="_blank"
               class="button is-black send-email-button"
             >
               <span class="icon">
